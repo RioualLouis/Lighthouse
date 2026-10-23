@@ -1,0 +1,136 @@
+# Lighthouse configuration
+#
+# Location: $XDG_CONFIG_HOME/lighthouse/config.toml (usually ~/.config/lighthouse/config.toml)
+# Every key is optional: missing keys fall back to the built-in defaults shown here.
+# Colors accept any CSS color (#RRGGBB, #RRGGBBAA, rgb(), hsl(), named colors).
+# Press Ctrl+R in Lighthouse to reload this file without restarting.
+
+# ---------------------------------------------------------------------------
+# Application interface
+# ---------------------------------------------------------------------------
+[ui]
+font_family = "'Inter', 'Cantarell', 'Noto Sans', 'Ubuntu', 'DejaVu Sans', sans-serif"
+font_size = 13                  # px
+background = "#FFFFFF"          # window, toolbar and panels
+border = "#E2E6EE"              # separators and outlines
+text = "#0F172A"
+text_muted = "#5A6478"
+hover = "#EEF4FF"               # button hover background
+accent = "#0A66FF"              # primary buttons, focus rings, links
+accent_hover = "#0050D8"
+accent_text = "#FFFFFF"         # text on accent background
+success = "#00B35A"
+error = "#FF1744"
+radius = 8                      # px, corner radius of buttons and menus
+
+# ---------------------------------------------------------------------------
+# Text editor
+# ---------------------------------------------------------------------------
+[editor]
+font_family = "'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Ubuntu Mono', 'DejaVu Sans Mono', monospace"
+font_size = 14                  # px
+line_height = 1.6
+tab_size = 4                    # spaces inserted by the Tab key
+render_delay_ms = 250           # pause after typing before the preview refreshes
+background = "#FFFFFF"
+text = "#1E293B"
+gutter_text = "#A0A9BA"         # line numbers
+current_line = "#F3F7FF"
+selection = "#C7DCFF"
+error_line = "#FFE5EA"
+
+# Syntax colors of the Mermaid code
+[editor.syntax]
+diagram = "#D500F9"             # classDiagram, sequenceDiagram...
+keyword = "#0A66FF"             # class, participant, loop, note, end...
+arrow = "#FF1744"               # -->, ->>, <|--, *--...
+string = "#00A152"              # "quoted text"
+label = "#FF6D00"               # text after ':' (messages, relation labels)
+member = "#00838F"              # class attributes and methods
+comment = "#98A2B3"             # %% comments
+punctuation = "#7C8799"         # { } ( ) < > ~
+
+# ---------------------------------------------------------------------------
+# Diagram preview
+# ---------------------------------------------------------------------------
+[preview]
+background = "#FFFFFF"
+grid = true                     # dotted grid behind the diagram
+grid_color = "#DCE3EF"
+max_auto_zoom = 1.5             # "fit" never enlarges small diagrams beyond this factor
+
+# ---------------------------------------------------------------------------
+# Diagram colors (applied to every Mermaid diagram type)
+# ---------------------------------------------------------------------------
+[diagram]
+font_family = "'Inter', 'Noto Sans', 'Ubuntu', 'DejaVu Sans', sans-serif"
+font_size = 15                  # px
+look = "classic"                # "classic", "neo" or "handDrawn"
+text = "#0F172A"                # generic text
+line = "#1E293B"                # relations, arrows, edges
+edge_label_background = "#FFFFFF"
+
+# Class diagrams
+class_fill = "#E8F1FF"
+class_border = "#0A66FF"
+class_text = "#0B1A3A"
+
+# Sequence diagrams
+actor_fill = "#0A66FF"
+actor_border = "#0047C2"
+actor_text = "#FFFFFF"
+lifeline = "#8592AA"
+message = "#1E293B"             # message arrows
+message_text = "#1E293B"
+note_fill = "#FFF4B8"
+note_border = "#FFB300"
+note_text = "#3B2A00"
+activation_fill = "#D9FFEA"
+activation_border = "#00B35A"
+block_fill = "#F6E8FF"          # loop / alt / opt label box
+block_border = "#AA00FF"
+block_text = "#6A00C9"
+sequence_number = "#FFFFFF"     # autonumber digits
+
+# Use case diagrams
+usecase_fill = "#F3E5FF"
+usecase_border = "#A100FF"
+usecase_text = "#2A0047"
+usecase_actor = "#0A66FF"       # stick figures
+boundary_fill = "#FFFFFF"       # system boundary
+boundary_border = "#8592AA"
+include_line = "#0A66FF"        # <<include>> relations
+extend_line = "#FF6D00"         # <<extend>> relations
+
+# State diagrams
+state_fill = "#DFFFEF"
+state_border = "#00B35A"
+state_text = "#003D1F"
+composite_fill = "#FFFFFF"      # body of composite states
+composite_title_fill = "#B8F5D6"
+state_terminal = "#0F172A"      # [*] start and end points
+
+# Activity diagrams (flowchart syntax)
+action_fill = "#FFF0DE"
+action_border = "#FF7A00"
+action_text = "#3D1D00"
+decision_fill = "#FFF6B3"       # diamonds
+decision_border = "#FFB300"
+activity_terminal = "#0F172A"   # start and end points (fork/join bars use `line`)
+
+# Secondary and tertiary colors used by other diagram types (ER, mind map...)
+secondary = "#FFE3EC"
+tertiary = "#E2FFF1"
+
+# Raw Mermaid theme variables, applied last. Any variable of Mermaid's "base"
+# theme can be set here, see https://mermaid.js.org/config/theming.html
+[diagram.overrides]
+# noteBkgColor = "#FFF4B8"
+
+# ---------------------------------------------------------------------------
+# PNG export
+# ---------------------------------------------------------------------------
+[export]
+png_scale = 2.0                 # pixel density multiplier
+png_padding = 32                # px around the diagram
+png_background = "#FFFFFF"      # set to "transparent" for a transparent image

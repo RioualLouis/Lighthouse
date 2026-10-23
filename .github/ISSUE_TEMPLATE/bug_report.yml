@@ -1,0 +1,40 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagram
+    attributes:
+      label: Mermaid code
+      description: The smallest diagram that shows the problem, if any.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Lighthouse version
+      placeholder: "1.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (.deb)
+        - Linux (AppImage)
+        - Linux (built from source)
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Screenshots, config.toml changes, other details

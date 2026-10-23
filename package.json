@@ -1,0 +1,25 @@
+{
+  "name": "lighthouse",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Lighthouse: live Mermaid UML diagram editor",
+  "license": "MIT",
+  "scripts": {
+    "tauri": "tauri",
+    "vendor": "node scripts/vendor.mjs",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "check": "node scripts/check-frontend.mjs"
+  },
+  "dependencies": {
+    "mermaid": "12.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4",
+    "playwright": "1.64.0",
+    "smol-toml": "1.8.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest an improvement or a new diagram type
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need?
+      description: The problem to solve, rather than a precise solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested solution
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: Works on both Linux and Windows
